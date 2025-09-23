@@ -1,0 +1,34 @@
+package com.example.my_cute_hotel;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class  MainActivity extends AppCompatActivity {
+
+    private Button btnLogin, btnRegister;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Make sure these IDs exist in activity_main.xml
+        btnLogin = findViewById(R.id.loginButton);
+        btnRegister = findViewById(R.id.registerButton);
+
+        // Go to LoginActivity
+        btnLogin.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+        });
+
+        // Go to RegisterActivity
+        btnRegister.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+            startActivity(intent);
+        });
+    }
+}
