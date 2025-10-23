@@ -1,5 +1,6 @@
 package com.example.my_cute_hotel;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -32,7 +33,6 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-
     private void validateInput() {
         String emailInput = email.getText().toString().trim();
         String passwordInput = password.getText().toString().trim();
@@ -61,7 +61,15 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        // If everything is okay
+        // ✅ If everything is okay, show a message and move to next page
         Toast.makeText(this, "Login successful! Welcome " + emailInput, Toast.LENGTH_LONG).show();
+
+        // Go to Select Room Activity
+        Intent intent = new Intent(LoginActivity.this, SelectRoomActivity.class);
+        intent.putExtra("userEmail", emailInput); // Optional: pass the user’s email
+        startActivity(intent);
+
+        // Optional: close the login screen so user can’t go back with back button
+        finish();
     }
 }

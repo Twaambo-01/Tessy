@@ -1,5 +1,6 @@
 package com.example.my_cute_hotel;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -21,7 +22,7 @@ public class RegisterActivity extends AppCompatActivity {
         // Initialize views
         email = findViewById(R.id.emailInput);
         password = findViewById(R.id.passwordInput);
-        confirmPassword = findViewById(R.id.confirmpasswordInput);
+         confirmPassword = findViewById(R.id.confirmpasswordInput);
         submit_button = findViewById(R.id.signupButton);
 
         // Click listener for Register button
@@ -69,7 +70,15 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        // If everything is okay
+        // ✅ If everything is okay
         Toast.makeText(this, "Registration successful for: " + emailInput, Toast.LENGTH_LONG).show();
+
+        // Move to the SelectRoomActivity
+        Intent intent = new Intent(RegisterActivity.this, SelectRoomActivity.class);
+        intent.putExtra("userEmail", emailInput); // Optional: pass email to next page
+        startActivity(intent);
+
+        // Optional: close registration screen
+        finish();
     }
 }

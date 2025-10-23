@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8ECF2"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvBookingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking Details"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Selected Room -->
+        <TextView
+            android:id="@+id/tvSelectedRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room: "
+            android:textSize="18sp"
+            android:textColor="#333"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Check-in Date -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check-in Date"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etCheckIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select check-in date" 
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Check-out Date -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check-out Date"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etCheckOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select check-out date"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Number of Guests -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Number of Guests"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etGuests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter number of guests"
+            android:inputType="number"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Confirm Button -->
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Booking"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:padding="12dp"/>
+    </LinearLayout>
+</ScrollView>

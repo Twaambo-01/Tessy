@@ -2,40 +2,42 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3F2FD"
-    android:gravity="center"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#E6EEF3">
 
     <TextView
-        android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:text="welcome to zambian Cute Hotel"
-        android:textColor="#363737"
-        android:textSize="28sp"
-        android:textStyle="bold" />
+        android:text="Welcome to My Cute Hotel"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginBottom="30dp" />
 
+    <!-- Login Button -->
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="#363737"
         android:text="Login"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:contentDescription="Login button" />
+        android:backgroundTint="#F9A6B0"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginBottom="15dp" />
 
+    <!-- Register Button -->
     <Button
         android:id="@+id/registerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#363737"
         android:text="Register"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:contentDescription="Register button" />
+        android:backgroundTint="#F9A6B0"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginBottom="15dp" />
+
+
 
 </LinearLayout>

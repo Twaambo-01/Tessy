@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#E8ECF2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Payment Method"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <RadioGroup
+        android:id="@+id/paymentGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_airtel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Airtel Money" />
+
+        <RadioButton
+            android:id="@+id/rb_mtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MTN Money" />
+
+        <RadioButton
+            android:id="@+id/rb_fnb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FNB Bank" />
+
+        <RadioButton
+            android:id="@+id/rb_zanaco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zanaco Bank" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Payment"
+        android:textColor="#fff"
+        android:backgroundTint="#4CAF50"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp" />
+</LinearLayout>
